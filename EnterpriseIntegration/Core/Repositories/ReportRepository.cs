@@ -39,7 +39,7 @@ namespace EnterpriseIntegration.Core.Repositories
                     ProductName = Convert.ToString(h.Faname),
                     ProductBuy = Convert.ToDecimal(h.Buy),
                     ProductPrice = Convert.ToDecimal(h.Price),
-                    WarehouseCode = Convert.ToInt32(h.anbcode),
+                    WarehouseCode = Convert.ToInt32(h.anbCode),
                     Stock = Convert.ToDecimal(h.Mojodi),                    
                 };
                 resultList.Add(reportDto);
