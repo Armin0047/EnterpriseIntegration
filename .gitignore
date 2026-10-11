@@ -1,0 +1,16 @@
+# Build output and IDE state
+**/bin/
+**/obj/
+.vs/
+**/.vs/
+*.user
+*.suo
+
+# Local settings may contain database credentials and signing keys
+**/appsettings.json
+**/appsettings.*.json
+!**/appsettings.example.json
+
+# Machine-specific publish profiles
+**/Properties/PublishProfiles/*.pubxml
+**/Properties/PublishProfiles/*.pubxml.user

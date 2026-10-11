@@ -1,0 +1,18 @@
+@EnterpriseIntegration_HostAddress = https://localhost:7041
+@AccessToken = REPLACE_WITH_JWT
+
+### دریافت توکن
+POST {{EnterpriseIntegration_HostAddress}}/api/Auth/token
+Content-Type: application/json
+
+{
+  "ClientId": "AriaSystem",
+  "ClientSecret": "REPLACE_WITH_CLIENT_SECRET"
+}
+
+### دریافت فاکتورها (پس از دریافت توکن، AccessToken را جایگزین کنید)
+GET {{EnterpriseIntegration_HostAddress}}/api/Invoices?fromDate=14030101&toDate=14030131&pageNumber=1&pageSize=50
+Authorization: Bearer {{AccessToken}}
+Accept: application/json
+
+###
