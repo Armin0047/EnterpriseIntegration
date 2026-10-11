@@ -18,12 +18,14 @@ namespace EnterpriseIntegration.Controllers
         public AuthController(IConfiguration configuration)
         {
             _configuration = configuration;
-            var expectedSecretHash = _configuration["PartnerAuth:ClientSecretHash"]
-                ?? throw new InvalidOperationException("PartnerAuth:ClientSecretHash is not configured.");
-            _expectedSecretHash = Convert.FromHexString(expectedSecretHash);
+            //var expectedSecretHash = _configuration["PartnerAuth:ClientSecretHash"]
+            //    ?? throw new InvalidOperationException("PartnerAuth:ClientSecretHash is not configured.");
+            _expectedSecretHash = Convert.FromHexString("؟");
             if (_expectedSecretHash.Length != 32)
                 throw new InvalidOperationException("PartnerAuth:ClientSecretHash must be a SHA-256 hash in hexadecimal format.");
         }
+
+
 
         [HttpPost("token")]
         public IActionResult GenerateToken([FromBody] LoginRequestDto request)
