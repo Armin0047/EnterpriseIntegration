@@ -63,9 +63,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Invoice Synchronization API",
+        Title = "Aria Synchronization API",
         Version = "v1",
-        Description = "Enterprise Web API for Invoicing System (High-Performance Dapper Stack)"
+        Description = "Enterprise Web API for Invoicing & Reporting<br/><b>Lead Developer:</b> Armin Karimi Damavandi (damavandiarmin@gmail.com)",
     });
 
     // اضافه کردن قابلیت ورودی Bearer Token به Swagger UI
